@@ -1,853 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Compost Matters</title>
+    <title>Compost Matters — Home</title>
     <meta name="description"
-        content="Sybrand Park's neighbourhood composting initiative: what we're doing and why, how it works, what to bring, maintenance plan, FAQs, and ways to volunteer." />
-
-    <Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;600;700;800&display=swap"
-            rel="stylesheet">
-
-
-        <style>
-            :root {
-                --paper: #fff6ea;
-                --ink: #2a2a2a;
-                --leaf: #849737;
-                --leaf-2: #505e20;
-                --soil: #56361e;
-                --accent: #de7d49;
-                --accent-2: #013e9b;
-                --accent-3: #bd452a;
-                --muted: #e8ded1;
-                /* slate */
-                --bad: #bd452a;
-                /* red */
-                --good: #505e20;
-                /* green */
-                --sky: #d1d9b4;
-                /* gentle green tint */
-            }
-
-            * {
-                box-sizing: border-box;
-            }
-
-            html,
-            body {
-                margin: 0;
-                padding: 0;
-            }
-
-            body {
-                font-family: Nunito, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-                color: var(--ink);
-                background: var(--paper);
-                line-height: 1.6;
-            }
-
-            a {
-                color: var(--leaf-2);
-                text-decoration: none;
-            }
-
-            a:hover {
-                text-decoration: underline;
-            }
-
-            .container {
-                max-width: 1080px;
-                margin: 0 auto;
-                padding: 24px;
-            }
-
-            header.hero {
-                background: linear-gradient(180deg, var(--paper), var(--sky));
-                border: 1px solid var(--leaf);
-                border-radius: 24px;
-                padding: 28px;
-                display: grid;
-                gap: 10px;
-                box-shadow: 0 10px 30px rgba(31, 122, 62, .08);
-            }
-
-            .brand {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                justify-content: center;
-                margin: 0 auto;
-            }
-
-            .brand .leaf {
-                font-size: 28px;
-            }
-
-            .brand .name {
-                font-family: Chewy, system-ui, sans-serif;
-                font-weight: 700;
-                font-size: clamp(22px, 3.4vw, 34px);
-                color: var(--leaf);
-                letter-spacing: 0.05em;
-            }
-
-            .hero h1 {
-                font-family: Chewy, system-ui, sans-serif;
-                font-size: clamp(50px, 4.4vw, 44px);
-                margin: 6px 0 2px;
-                color: var(--accent);
-                letter-spacing: 0.05em;
-                justify-content: center;
-                margin: 0 auto;
-            }
-
-            .hero h2 {
-                color: var(--soil);
-                letter-spacing: 0.05em;
-                justify-content: center;
-                margin: 0 auto;
-            }
-
-            .hero p {
-                margin: 0;
-            }
-
-            .cta-row {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                margin-top: 8px;
-            }
-
-            .btn {
-                display: inline-block;
-                padding: 12px 14px;
-                border-radius: 14px;
-                font-weight: 700;
-                border: 1px solid rgba(0, 0, 0, .08);
-                box-shadow: 0 4px 14px rgba(0, 0, 0, .06);
-            }
-
-            .btn.primary {
-                background: linear-gradient(180deg, var(--leaf), var(--leaf-2));
-                color: #fff;
-            }
-
-            .btn.ghost {
-                background: #fff;
-                color: var(--leaf);
-            }
-
-            .notice {
-                margin-top: 8px;
-                background: #fff;
-                border: 1px dashed rgba(31, 122, 62, .25);
-                padding: 12px 14px;
-                border-radius: 12px;
-            }
-
-            section {
-                margin-top: 28px;
-            }
-
-            h2 {
-                font-family: Chewy, system-ui, sans-serif;
-                letter-spacing: 0.05em;
-                font-size: clamp(22px, 3.4vw, 32px);
-                color: var(--leaf);
-                margin: 0 0 10px;
-            }
-
-            h3 {
-                font-size: 20px;
-                margin: 8px 0 6px;
-                color: var(--ink);
-            }
-
-            .kicker {
-                font-size: 12px;
-                text-transform: uppercase;
-                letter-spacing: .12em;
-                color: var(--accent);
-            }
-
-            .grid {
-                display: grid;
-                gap: 16px;
-            }
-
-            @media (min-width: 800px) {
-                .cols-2 {
-                    grid-template-columns: 1fr 1fr;
-                }
-
-                .cols-3 {
-                    grid-template-columns: repeat(3, 1fr);
-                }
-
-                .cols-4 {
-                    grid-template-columns: repeat(4, 1fr);
-                }
-            }
-
-            .card {
-                background: #fff;
-                border: 1px solid rgba(0, 0, 0, .08);
-                border-radius: 18px;
-                padding: 18px;
-                box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
-            }
-
-            .card img {
-                max-width: 100%;
-                height: auto;
-                display: block;
-            }
-
-            .paper {
-                background: var(--paper);
-            }
-
-            .steps .step {
-                position: relative;
-                padding-top: 10px;
-            }
-
-            .badge {
-                font-family: Chewy, system-ui, sans-serif;
-                letter-spacing: 0.05em;
-                position: absolute;
-                top: -12px;
-                left: -12px;
-                background: var(--accent);
-                color: #ffffff;
-                font-weight: 800;
-                width: 34px;
-                height: 34px;
-                display: grid;
-                place-items: center;
-                border-radius: 50%;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
-            }
-
-            .list {
-                margin: 8px 0 0 16px;
-            }
-
-            .list li {
-                margin: 6px 0;
-            }
-
-            .good {
-                color: var(--good);
-            }
-
-            .bad {
-                color: var(--bad);
-            }
-
-            /* FAQ: refined details */
-            /* Base + open both white */
-            .faq details {
-                background: #fff;
-                border: 1px solid rgba(0, 0, 0, .08);
-                border-radius: 14px;
-                overflow: hidden;
-                box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
-                transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
-            }
-
-            .faq details[open] {
-                background: #fff;
-                /* stay white when open */
-                border-color: var(--leaf);
-                /* optional: green border on open */
-                box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
-            }
-
-            /* Content panel also white */
-            .faq .content {
-                background: #fff;
-            }
-
-            .faq details+details {
-                margin-top: 12px;
-            }
-
-            .faq summary {
-                background: #fff;
-                list-style: none;
-                /* remove default marker */
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                padding: 14px 16px;
-                cursor: pointer;
-                font-weight: 700;
-                user-select: none;
-                outline: none;
-            }
-
-            .faq summary::-webkit-details-marker {
-                display: none;
-            }
-
-            /* Question styling */
-            .faq summary .q {
-                letter-spacing: .05em;
-                font-size: 1.05rem;
-            }
-
-            /* Chevron */
-            .faq summary::after {
-                content: "";
-                margin-left: auto;
-                width: 10px;
-                height: 10px;
-                border-right: 2px solid var(--leaf-2);
-                border-bottom: 2px solid var(--leaf-2);
-                transform: rotate(-45deg);
-                transition: transform .25s ease;
-            }
-
-            .faq details[open] summary::after {
-                transform: rotate(45deg);
-            }
-
-            /* Panel content + simple open animation */
-            .faq .content {
-                padding: 0 16px 16px;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height .3s ease;
-            }
-
-            .faq details[open] .content {
-                max-height: 480px;
-            }
-
-            /* adjust if answers are longer */
-
-            /* Open state emphasis */
-            .faq details[open] {
-                background: var(--paper);
-                border-color: var(--leaf);
-                box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
-            }
-
-            /* Keyboard focus */
-            .faq summary:focus-visible {
-                outline: 3px solid color-mix(in oklab, var(--leaf) 35%, white);
-                outline-offset: 2px;
-            }
-
-
-            .pill {
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                padding: 6px 10px;
-                border-radius: 999px;
-                border: 1px solid rgba(0, 0, 0, .1);
-            }
-
-            .small {
-                color: var(--accent);
-                font-size: 14px;
-            }
-
-            /* Small tweaks for stat cards */
-            .stat .icon {
-                font-size: 1.6rem;
-                line-height: 1;
-                margin-bottom: 6px;
-            }
-
-            .stat h3 {
-                margin: 4px 0 6px;
-                font-weight: 700;
-                color: var(--leaf);
-            }
-
-
-            footer {
-                color: var(--accent);
-                font-size: 14px;
-                text-align: center;
-                padding: 24px 0 10px;
-            }
-
-            /* Print tweaks */
-            @media print {
-
-                .btn,
-                .cta-row,
-                .notice {
-                    display: none !important;
-                }
-
-                .container {
-                    padding: 0 10mm;
-                }
-
-                header.hero {
-                    box-shadow: none;
-                }
-            }
-
-            /* 1) Let hero content shrink and wrap on small screens */
-            header.hero {
-                padding: 16px;
-            }
-
-            header.hero>* {
-                min-width: 0;
-            }
-
-            /* grid children may shrink */
-            .hero h1 {
-                /* your Chewy heading, but with a sane clamp for mobile */
-                font-size: clamp(28px, 8vw, 42px);
-                line-height: 1.1;
-                word-break: break-word;
-                overflow-wrap: anywhere;
-                justify-self: center;
-                /* centers within the grid cell */
-                text-align: center;
-                /* centers the text itself */
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero h2 {
-                font-size: clamp(18px, 5.5vw, 28px);
-                line-height: 1.2;
-                overflow-wrap: anywhere;
-            }
-
-            /* 2) Keep the notice inside the container and wrapping nicely */
-            .notice {
-                box-sizing: border-box;
-                max-width: 100%;
-                overflow-wrap: anywhere;
-                /* handles long words/links */
-                word-break: break-word;
-                margin-left: 0;
-                margin-right: 0;
-            }
-
-            /* 3) Ensure the outer container never overflows */
-            .container {
-                padding: 16px;
-            }
-
-            .container,
-            header.hero {
-                width: 100%;
-                max-width: 1080px;
-            }
-
-            /* 4) Buttons: allow wrapping instead of pushing the layout wider */
-            .cta-row {
-                flex-wrap: wrap;
-            }
-
-            .cta-row .btn {
-                min-width: 0;
-            }
-
-            /* 5) Safety on generic text inside hero */
-            header.hero p {
-                overflow-wrap: anywhere;
-                word-break: break-word;
-            }
-
-            /* Optional: extra-tight mobile tweaks */
-            @media (max-width: 400px) {
-                header.hero {
-                    padding: 12px;
-                }
-
-                .btn {
-                    padding: 10px 12px;
-                }
-            }
-        </style>
+        content="Sybrand Park's neighbourhood composting initiative: overview, drop-off, how it works, volunteers, FAQs, resources." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
     <div class="container">
 
-        <header class="hero" role="banner">
-            <div class="brand"><span class="leaf">🌿</span><span class="name">compost matters</span>
-            </div>
-            <h1>Neighbourhood Composting</h1>
-            <h2>Turning Food Scraps into Soil</h2>
-            <p>The Sybrand Park Composting Initiative aims to make our suburb a <strong>Food Waste Free Zone</strong> by
-                creating a community composting space. Residents drop off food scraps; together we turn them into
-                compost for our neighbourhood gardens.</p>
-            <div class="cta-row" role="group" aria-label="Primary actions">
-                <a class="btn primary" href="#compost-with-us">Drop Off Food Scraps</a>
-                <a class="btn ghost" href="#volunteers">Volunteer</a>
-                <a class="btn ghost" href="#what-is-composting">Learn the Basics</a>
-            </div>
-            <div class="notice">📣 <strong>Community Meeting:</strong> Star College Hall • <strong>18 Oct</strong> •
-                <strong>15:00</strong> — Have your say about how the site will run.
-            </div>
-        </header>
+        <!-- Shared header -->
+        <div data-include="/partials/header.html"></div>
 
-        <section id="purpose" aria-labelledby="purpose-title">
-            <h2 id="purpose-title">What We’re Doing & Why</h2>
+        <!-- Home: quick previews -->
+        <section id="previews" aria-labelledby="previews-title">
+            <h2 id="previews-title">Explore</h2>
             <div class="grid cols-3">
-                <div class="card">
-                    <span class="kicker">Our goal</span>
-                    <h3>Food Waste Free Zone</h3>
-                    <p>We’re setting up a shared composting site so neighbours can drop off fruit & veg scraps, coffee
-                        grounds, and eggshells to be turned into nutrient‑rich compost.</p>
-                </div>
-                <div class="card">
-                    <span class="kicker">Why it matters</span>
-                    <h3>Easy, Low‑Cost, Local</h3>
-                    <p>Not everyone has the space, tools, or know‑how to compost at home. A neighbourhood site makes it
-                        simple, tidy, and fun to keep organics out of the bin—and out of landfill.</p>
-                </div>
-                <div class="card">
-                    <span class="kicker">Backing</span>
-                    <h3>Community‑Funded Setup</h3>
-                    <p>The <strong>Sybrand Park Civic Association</strong> has kindly offered to cover the costs of
-                        getting started.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="what-is-composting" aria-labelledby="composting-title">
-            <h2 id="composting-title">What is Composting?</h2>
-            <div class="card">
-                <p>Composting is a <strong>natural recycling process</strong> where microbes (and sometimes worms!)
-                    break down organic materials - like fruit peels, coffee grounds, and dry leaves - into dark, crumbly
-                    soil-like material called <strong>compost</strong>. It works best when there’s a simple balance of
-                    “browns” (dry, carbon-rich materials like leaves or shredded cardboard) and “greens” (fresh,
-                    nitrogen-rich scraps), plus a little air and moisture. The result is a clean, earthy-smelling
-                    material that <strong>returns nutrients to the soil</strong> and helps plants grow.</p>
-                <div><img src="images/what-is-compost.png" alt="What is compost"></div>
-            </div>
-        </section>
-
-        <section id="compost-with-us" aria-labelledby="composting-title">
-            <h2 id="composting-title">How We'll Compost in Sybrand Park</h2>
-            <div class="card">
-                <p>While we’re doing our part to help the planet, we also get to <strong>connect as
-                        neighbours</strong>, simple habits we share, together. Grab a boerie or a coffee, maybe join a
-                    quick class,
-                    say hello to a few friendly faces, and head home with a warm glow.
-                <p>
-                <div><img src="images/compost-matters-info-sheet.png" alt="Neighbourhood compost bin"></div>
-            </div>
-        </section>
-
-        <section id="system" aria-labelledby="system-title">
-            <h2 id="system-title">Our Composting System</h2>
-            <div class="grid cols-2">
-                <div class="card">
-                    <p><strong>Location:</strong> With permission from the City of Cape Town Parks Department, the bin
-                        is located in <strong>Prieska Park</strong> (exact pin and drop‑off hours shared on the
-                        neighbourhood WhatsApp groups).</p>
-                    <p><strong>Containment:</strong> Secure, lidded, and rodent‑resistant bins with clear signage and
-                        rules.</p>
-                    <p><strong>Operations:</strong> Volunteers open the bins on a weekly rotation, check the mix, and
-                        record simple metrics (inputs, turning, moisture).</p>
-                    <p><strong>Hygiene:</strong> Tools are provided for tool‑only handling; fresh scraps are immediately
-                        covered with browns.</p>
-                </div>
-                <div class="card" style="display:grid;place-items:center;min-height:220px;">
-                    <!-- Replace src with your hosted image path -->
-                    <img src="bin-photo.png" alt="Compost bin photo"
-                        style="max-width:100%; height:auto; border-radius:12px; border:1px solid rgba(0,0,0,.08)" />
-                    <p class="small">Our compost bins.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="maintenance" aria-labelledby="maint-title">
-            <h2 id="maint-title">How We’ll Maintain It</h2>
-            <div class="card">
-                <p>To keep the site clean, safe, and odour-free, we follow this simple weekly routine:</p>
-                <ul class="list">
-                    <li><strong>Weekly rota (Saturdays):</strong> open, check, tidy, close.</li>
-                    <li><strong>Cover every drop</strong> with dry browns (leaves/cardboard); <strong>kitchen scraps
-                            only</strong>.</li>
-                    <li><strong>Right mix:</strong> ~2–3 parts browns : 1 part greens; <strong>turn</strong> for
-                        airflow.</li>
-                    <li><strong>Moisture:</strong> wrung‑out sponge (≈40–60%); add water if dry, browns if wet.</li>
-                    <li><strong>Hygiene & security:</strong> lids closed/locked, site swept, tool‑only handling.</li>
-                    <li><strong>Log each visit:</strong> odour, moisture, actions—transparent and trackable.</li>
-                    <li><strong>Rodent‑resistant bins;</strong> quick response to any issues.</li>
-                </ul>
-                <p><strong>Fast fixes:</strong> Smell/flies → add 2–3 buckets browns & turn • Too wet → fork in browns,
-                    brief air, re‑close • Too dry/not heating → small greens layer + splash of water.</p>
-            </div>
-        </section>
-
-        <section id="accept" aria-labelledby="accept-title">
-            <h2 id="accept-title">What We Can Accept</h2>
-            <div class="card">
-                <p>Our site is small and volunteer‑run, and we don’t have the tools (like chippers) to process
-                    garden waste effectively. To keep the system working and odour‑free, we’re focusing on
-                    <strong>kitchen scraps only</strong> for now. Volunteers will layer your scraps with dry
-                    <em>browns</em> and manage the pile so the balance stays right.
-                </p>
-                <div class="grid cols-2" style="margin-top:8px;">
-                    <div>
-                        <p class="good"><strong>✅ Add</strong></p>
-                        <ul class="list">
-                            <li>Fruit & veg scraps, peels</li>
-                            <li>Coffee grounds</li>
-                            <li>Tea leaves (no plastic tea bags)</li>
-                            <li>Crushed eggshells</li>
-                        </ul>
+                <article class="card preview">
+                    <div class="media">
+                        <img src="/images/drop-off-thumb.jpg" alt="Neighbour dropping off food scraps" loading="lazy">
                     </div>
-                    <div>
-                        <p class="bad"><strong>⛔ Skip</strong></p>
-                        <ul class="list">
-                            <li>NO garden waste, meat, or bones</li>
-                            <li>Cooked/greasy food, oils/fats, dairy</li>
-                            <li>Pet waste, diapers</li>
-                            <li>Glossy/coloured paper, plastic tea bags</li>
-                            <li>Large branches (chip first)</li>
-                            <li>Weeds with seeds or invasive roots</li>
-                        </ul>
+                    <div class="content">
+                        <h3>Drop Off Food Scraps</h3>
+                        <p>Saturdays in Prieska Park. What to bring, where to go, and what we can accept.</p>
+                        <a class="btn link" href="/drop-off.html">Read more →</a>
                     </div>
-                </div>
-                <p class="small"><em>As the project grows and if we secure the right equipment, we’ll review these
-                        limits.</em></p>
+                </article>
+                <article class="card preview">
+                    <div class="media">
+                        <img src="/images/compost-thumb.jpg" alt="Neighbour dropping off food scraps" loading="lazy">
+                    </div>
+                    <div class="content">
+                        <h3>What is Composting?</h3>
+                        <p>What composting is, the simple balance (browns/greens), bokashi, and more.</p>
+                        <a class="btn link" href="/what-is-composting.html">Read more →</a>
+                    </div>
+                </article>
+                <article class="card preview">
+                    <div class="media">
+                        <img src="/images/volunteer-thumb.jpg" alt="Neighbour dropping off food scraps" loading="lazy">
+                    </div>
+                    <div class="content">
+                        <h3>Volunteer</h3>
+                        <p>Compost Champions, bin-opening rota, light maintenance—pick a role that suits you.</p>
+                        <a class="btn link" href="/volunteers.html">Read more →</a>
+                    </div>
+                </article>
+                <article class="card preview">
+                    <div class="media">
+                        <img src="/images/faq-thumb.jpg" alt="Neighbour dropping off food scraps" loading="lazy">
+                    </div>
+                    <div class="content">
+                        <h3>FAQs</h3>
+                        <p>Smells? Pests? Safety? Quick answers to top questions from neighbours.</p>
+                        <a class="btn link" href="/faqs.html">Read more →</a>
+                    </div>
+                </article>
+                <article class="card preview">
+                    <div class="media">
+                        <img src="/images/resources-thumb.jpg" alt="Neighbour dropping off food scraps" loading="lazy">
+                    </div>
+                    <div class="content">
+                        <h3>Resources</h3>
+                        <p>City guidance, policy notes, and downloads you can keep on your phone.</p>
+                        <a class="btn link" href="/resources.html">Read more →</a>
+                    </div>
+                </article>
+                <article class="card preview">
+                    <div class="media">
+                        <img src="/images/events-thumb.jpg" alt="Neighbour dropping off food scraps" loading="lazy">
+                    </div>
+                    <div class="content">
+                        <h3>All Events</h3>
+                        <p>Event and meeting times.</p>
+                        <a class="btn link" href="/events.html">Read more →</a>
+                    </div>
+                </article>
+                <!--
+                <article class="card preview">
+                    <div class="media">
+                        <img src="/images/events-thumb.jpg" alt="Neighbour dropping off food scraps" loading="lazy">
+                    </div>
+                    <div class="content">
+                        <h3>Contact</h3>
+                        <p>WhatsApp link, and who to reach if you’ve got questions.</p>
+                        <a class="btn link" href="/contact.html">Read more →</a>
+                    </div>
+                </article> -->
             </div>
         </section>
-        <div><br></div>
-        <div class="card">
-            <h3>Your Food Scraps at Home</h3>
-            <p>Almost anything works as a countertop caddy: a clean ice‑cream tub or other lidded container, a
-                metal tin, a coffee canister, or a small pedal bin. Paper bags or newspaper wraps also work
-                well.</p>
-            <p>Looking for something a little nicer for your counter? Try:</p>
-            <ul class="list">
-                <li><a href="https://www.takealot.com/mikaco-stainless-steel-compost-bin-with-handle-2-activated-charc/PLID98949177"
-                        target="_blank" rel="noopener">MIkaco Stainless Steel Compost Bin with Handle-2 Activated
-                        Charcoal Filter Pad</a></li>
-                <li><a href="https://www.takealot.com/compact-kitchen-bin-grey/PLID92852834" target="_blank"
-                        rel="noopener">Compact Kitchen Bin (Countertop</a>)</li>
-                <li><a href="https://www.takealot.com/6-l-kitchen-compost-bin/PLID98508771" target="_blank"
-                        rel="noopener">6L Kitchen Compost Bin</a></li>
-            </ul>
-        </div>
 
-        <section id="volunteers" aria-labelledby="vol-title">
-            <h2 id="vol-title">Volunteers’ Section</h2>
-            <div class="card">
-                <p>There are three easy ways to help:</p>
-                <ul class="list">
-                    <li><strong>Compost Champion:</strong> Do short drop‑off demos and answer quick questions.</li>
-                    <li><strong>Bin‑Opening Rota:</strong> Join the weekly rotation to open/close and check the bins.
-                    </li>
-                    <li><strong>Light Maintenance:</strong> Help with turning, topping with browns, sweeping, and simple
-                        record‑keeping.</li>
-                </ul>
-                <p><strong>Ready to jump in?</strong> WhatsApp <a
-                        href="https://wa.me/27607577829?text=Hi%20Maya%2C%20I%27d%20like%20to%20help%20with%20Compost%20Matters."
-                        target="_blank" rel="noopener"><strong>Maya</strong></a> to join the Sybrand Park Composting
-                    Initiative.</p>
-            </div>
-        </section>
-
+        <!-- Did You Know? (added here) -->
         <section id="facts" aria-labelledby="facts-title">
             <h2 id="facts-title">Did You Know?</h2>
-
             <div class="grid cols-3">
                 <div class="card stat">
                     <div class="icon">🌍</div>
                     <h3>Global Food Waste</h3>
-                    <p>About <b>one-third</b> of of all food produced globally is wasted.</p>
+                    <p>About <strong>one-third</strong> of all food produced globally is wasted.</p>
                 </div>
 
                 <div class="card stat">
                     <div class="icon">💨</div>
                     <h3>Methane Impact</h3>
-                    <p>In landfills, food waste produces methane, which <strong>warms the planet ~84× more than
-                            CO₂</strong> over 20 years.</p>
+                    <p>In landfills, food waste produces methane, which warms the planet ~<strong>84×</strong> more
+                        than CO₂ over 20 years.</p>
                 </div>
 
                 <div class="card stat">
                     <div class="icon">🗑️</div>
                     <h3>Organic Waste in Bins</h3>
-                    <p>Organic waste in bins can <strong>cause bad smells, attract pests, and create health
-                            risks</strong> for waste workers.
-                    </p>
+                    <p>Organic waste in bins can cause <strong>smells, pests, and risks</strong> for waste
+                        workers—composting fixes that.</p>
                 </div>
 
                 <div class="card stat">
                     <div class="icon">🥬</div>
                     <h3>Western Cape Organic Waste</h3>
-                    <p>Out of the total of 7,7 million tonnes of waste produced annually, 2,9 million is organic waste.
-                        Organic waste thus makes up
-                        a huge <strong>37% of all the waste produced</strong> <a
+                    <p><strong>37%</strong> of the province’s waste is organic (2.9 of 7.7 Mt). <a
                             href="https://greencape.co.za/library/greencape-2016-market-intelligence-reports/"
-                            target="_blank" rel="noopener">(GreenCape, 2016)</a>.</p>
+                            target="_blank" rel="noopener">(GreenCape, 2016)</a></p>
                 </div>
 
                 <div class="card stat">
                     <div class="icon">🚚</div>
                     <h3>Landfill Crunch</h3>
-                    <p>Cape Town’s main landfill has ~<strong>3 years</strong> left; Johannesburg sites average
-                        <strong>&lt;3 years</strong> of airspace. New landfills are costly and short-term <a
+                    <p>Cape Town’s main landfill has ~<strong>3 years</strong> left; Joburg sites average
+                        <strong>&lt;3 years</strong>. New landfills are costly and short-term. <a
                             href="https://resource.capetown.gov.za/documentcentre/Documents/City%20strategies%2C%20plans%20and%20frameworks/IntegratedWasteManagementPlanIWMP_WasteSectorPlan_2022-27.pdf"
-                            target="_blank" rel="noopener">(CoCT IWMP, 2024)</a>.</em>
+                            target="_blank" rel="noopener">(CoCT IWMP)</a>
                     </p>
                 </div>
 
                 <div class="card stat">
                     <div class="icon">📜</div>
                     <h3>Organic Waste Ban</h3>
-                    <p>Western Cape policy: <strong>100% ban</strong> on organics to landfill by <strong>2027</strong>.
-                        Community composting helps households get ready
-                        <a href="https://greencape.co.za/assets/Waste-to-Energy_Industry-Brief_26-07-2021.pdf"
-                            target="_blank" rel="noopener">(GreenCape, 2021).</a>
+                    <p>Western Cape policy targets a <strong>100% ban</strong> on organics to landfill by
+                        <strong>2027</strong>. <a
+                            href="https://greencape.co.za/assets/Waste-to-Energy_Industry-Brief_26-07-2021.pdf"
+                            target="_blank" rel="noopener">(GreenCape, 2021)</a>
                     </p>
                 </div>
-
             </div>
         </section>
 
-        <section id="faqs" class="faq" aria-labelledby="faq-title">
-            <h2 id="faq-title">FAQs</h2>
-            <details>
-                <summary><span class="q">Will it be unhygienic or smelly?</span></summary>
-                <div class="content">
-                    <p>No. Done right, compost smells earthy (not rotten). We prevent odours by accepting kitchen scraps
-                        only (no meat/dairy/oils), covering every drop‑off with dry browns (leaves/cardboard),
-                        turning/aerating the pile regularly, and keeping lids closed and the area tidy. <em>Home
-                            tip:</em>
-                        store scraps in the freezer until drop‑off.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="q">What about pests (rats, flies, dogs, birds)?</span></summary>
-                <div class="content">
-                    <p>We reduce attraction by excluding meat/dairy, keeping lids closed, covering fresh scraps with
-                        browns,
-                        and keeping the area clean. If activity is noticed, we adjust the carbon mix, turning schedule,
-                        and
-                        add extra covers (e.g., hessian). Pet waste is never accepted.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="q">Is it a public‑health concern?</span></summary>
-                <div class="content">
-                    <p>We use source separation (no high‑risk materials), closed containers, tool‑only handling,
-                        sanitiser
-                        at the bay, and immediate covering with browns to suppress vectors and odour. Still concerned?
-                        Visit
-                        on Saturdays when we open the bins—we’ll walk you through it.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="q">Is the site secure? Can vagrants/animals access it?</span></summary>
-                <div class="content">
-                    <p>The bins are lidded and locked, with clear rules and regular volunteer checks. We exclude edible
-                        attractants (meat/dairy) and respond quickly to any issues reported.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="q">Can you collect from homes?</span></summary>
-                <div class="content">
-                    <p>Right now we’re running park drop‑off on Saturdays. If you need help getting your container to
-                        the
-                        park, let us know—we’ll try to match you with a nearby volunteer. If there’s enough interest,
-                        we’ll
-                        pilot a street‑by‑street collection day.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="q">Where exactly do I put my scraps?</span></summary>
-                <div class="content">
-                    <p>Collect during the week (or freeze them). On Saturday, bring your container to the compost bins
-                        in
-                        Prieska Park. We’ll share the pin and times on the neighbourhood WhatsApp groups.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="q">Do I need a special container?</span></summary>
-                <div class="content">
-                    <p>No. Low‑cost options include a clean ice‑cream tub or other lidded container, a paper bag, or a
-                        newspaper wrap. Please avoid plastic and “compostable” plastic bags (they don’t break down well
-                        in
-                        our system). If you want a countertop caddy, see <em>Your Food Scraps at Home</em>.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="q">I don’t cook much / I bury scraps in my garden, should I still join?</span>
-                </summary>
-                <div class="content">
-                    <p>Yes—small amounts help. This project offers a shared, tidy option and supports neighbours who
-                        can’t
-                        compost at home.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="q">I already separate my food waste, how can I help others?</span></summary>
-                <div class="content">
-                    <p>You’re a Compost Champion already! Lend a hand by doing drop‑off demos, helping with light
-                        maintenance, and joining the bin‑opening rota (weekly rotation so no one carries it alone).
-                        Ready to
-                        jump in? See the <a href="#volunteers">Volunteers’ Section</a> to pick a role, choose a
-                        Saturday,
-                        and join the WhatsApp group.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="q">Can I take compost home?</span></summary>
-                <div class="content">
-                    <p>Yes. Contributors can collect a share when batches finish. We’ll also reserve compost for verge
-                        beds
-                        and street trees.</p>
-                </div>
-            </details>
-        </section>
-
-        <section id="resources" aria-labelledby="resources-title">
-            <h2 id="resources-title">Additional Resources</h2>
-            <div class="grid cols-3">
-                <a class="card" href="#" target="_blank" rel="noopener">What City of Cape Town Says About Composting</a>
-                <a class="card" href="#" target="_blank" rel="noopener">City of Cape Town Waste Strategy 2025</a>
-                <a class="card" href="#" target="_blank" rel="noopener">The Compost Coach</a>
-            </div>
-        </section>
-
-        <section id="contact" aria-labelledby="contact-title">
-            <h2 id="contact-title">Contact & Updates</h2>
-            <p>
-                Questions or want to volunteer?
-                Email <a href="mailto:sybrandparkcivicassoc@gmail.com">sybrandparkcivicassoc@gmail.com</a>
-                or WhatsApp <a
-                    href="https://wa.me/27607577829?text=Hi%20Maya%2C%20I%27d%20like%20to%20help%20with%20Compost%20Matters."
-                    target="_blank" rel="noopener"><strong>Maya</strong></a>.
-            </p>
-
-        </section>
-
-        <footer>
-            <p>© <span id="year"></span> Sybrand Park Civic Association - Compost Matters • Built with love and kitchen
-                scraps 🌱</p>
-        </footer>
+        <!-- Shared footer -->
+        <div data-include="/partials/footer.html"></div>
     </div>
 
+    <script src="/js/includes.js"></script>
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+        // set the year after the footer has been injected
+        window.addEventListener('partials:loaded', () => {
+            const y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+        });
     </script>
+    <script src="/js/events.js"></script>
+
 </body>
 
 </html>
