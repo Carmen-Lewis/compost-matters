@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Volunteer — Compost Matters</title>
+  <meta name="description" content="Compost Champions, bin-opening rota, and light maintenance roles." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div data-include="/partials/header.html"></div>
+
+    <section id="volunteers">
+      <h2>Volunteers’ Section</h2>
+      <div class="card">
+        <p>There are three easy ways to help:</p>
+        <ul class="list">
+          <li><strong>Compost Champion:</strong> Do short drop-off demos and answer quick questions.</li>
+          <li><strong>Bin-Opening Rota:</strong> Join the weekly rotation to open/close and check the bins.</li>
+          <li><strong>Light Maintenance:</strong> Help with turning, topping with browns, sweeping, and simple record-keeping.</li>
+        </ul>
+        <p><strong>Ready to jump in?</strong> <a href="https://wa.me/27607577829?text=Hi%20Maya%2C%20I%27d%20like%20to%20help%20with%20Compost%20Matters." target="_blank" rel="noopener"><strong class="accent">WhatsApp us</strong></a> to join the Sybrand Park Composting Initiative.</p>
+      </div>
+    </section>
+
+    <div data-include="/partials/footer.html"></div>
+  </div>
+  <    <script src="/js/includes.js"></script>
+    <script>
+        // set the year after the footer has been injected
+        window.addEventListener('partials:loaded', () => {
+            const y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+        });
+    </script>
+    <script src="/js/events.js"></script>
+</body>
+</html>

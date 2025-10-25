@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resources — Compost Matters</title>
+  <meta name="description" content="City guidance, policy documents, and helpful composting links." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div data-include="/partials/header.html"></div>
+
+    <section id="resources">
+      <h2>Additional Resources</h2>
+      <div class="grid cols-3">
+        <a class="card" href="https://www.capetown.gov.za/Family%20and%20home/Greener-living/Green-gardening-and-eating/Start-composting-at-home" target="_blank" rel="noopener">What City of Cape Town Says About Composting</a>
+        <a class="card" href="https://resource.capetown.gov.za/documentcentre/Documents/City%20strategies,%20plans%20and%20frameworks/CCT_Waste_Strategy.pdf" target="_blank" rel="noopener">City of Cape Town Waste Strategy 2025</a>
+        <a class="card" href="https://www.instagram.com/compostable.kate?igsh=aGIzcW4xN2p6Nmc2" target="_blank" rel="noopener">The Compost Coach on Instagram</a>
+        <a class="card" href="https://bokashiliving.com/what-is-bokashi-bran/" target="_blank" rel="noopener">What is bokashi bran (compost accelerator)? - Bokashi Living</a>
+      </div>
+
+    <div data-include="/partials/footer.html"></div>
+  </div>
+      <script src="/js/includes.js"></script>
+    <script>
+        // set the year after the footer has been injected
+        window.addEventListener('partials:loaded', () => {
+            const y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+        });
+    </script>
+    <script src="/js/events.js"></script>
+</body>
+</html>

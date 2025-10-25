@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Events — Compost Matters</title>
+  <meta name="description" content="Get in touch and see what's on." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div data-include="/partials/header.html"></div>
+
+    <section id="events" aria-labelledby="events-title">
+      <h2 id="events-title">Events</h2>
+
+      <div class="grid cols-3">
+        <article class="card" id="next-event">
+          <h3>Next Event</h3>
+          <p class="small">Loading…</p>
+        </article>
+
+        <article class="card" id="past-event-1">
+          <h3>Most Recent</h3>
+          <p class="small">Loading…</p>
+        </article>
+
+        <article class="card" id="past-event-2">
+          <h3>Previous</h3>
+          <p class="small">Loading…</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="event-gallery" aria-labelledby="gallery-title" style="margin-top:28px">
+      <h2 id="gallery-title">Event Gallery</h2>
+
+      <div class="grid cols-3">
+        <article class="card gallery-empty" role="status" aria-live="polite">
+          <div class="gallery-placeholder" aria-hidden="true">📷</div>
+          <h3>Coming soon</h3>
+          <p>We’ll share photos from our drop-offs and workshops here.</p>
+          <p class="small">Have great pics to include? <a href="https://wa.me/27607577829" target="_blank"
+              rel="noopener"><br><strong>WhatsApp us</strong></a>.</p>
+        </article>
+        <!-- <div class="gallery-grid cols-3">
+  <figure class="gallery-item card">
+    <img src="/images/events/2025-11-08-koek-compost-1.jpg" alt="Neighbours at the Koek & Compost drop-off">
+    <figcaption class="small" style="padding:10px">Koek & Compost — 08 Nov</figcaption>
+  </figure>
+</div>
+-->
+      </div>
+    </section>
+
+
+    <div data-include="/partials/footer.html"></div>
+  </div>
+  <script src="/js/includes.js"></script>
+  <script>
+    // set the year after the footer has been injected
+    window.addEventListener('partials:loaded', () => {
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    });
+  </script>
+  <script src="/js/events.js"></script>
+</body>
+
+</html>

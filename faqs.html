@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQs — Compost Matters</title>
+  <meta name="description" content="Common questions about smells, pests, safety, and collection." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div data-include="/partials/header.html"></div>
+
+    <section id="faqs" class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQs</h2>
+
+      <details>
+        <summary><span class="q">Will it be unhygienic or smelly?</span></summary>
+        <div class="content">
+          <p>No. Done right, compost smells earthy (not rotten). We prevent odours by accepting kitchen scraps only (no meat/dairy/oils), covering every drop-off with dry browns (leaves/cardboard), turning/aerating the pile regularly, and keeping lids closed and the area tidy. <em>Home tip:</em> store scraps in the freezer until drop-off.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q">What about pests (rats, flies, dogs, birds)?</span></summary>
+        <div class="content">
+          <p>We reduce attraction by excluding meat/dairy, keeping lids closed, covering fresh scraps with browns, and keeping the area clean. If activity is noticed, we adjust the carbon mix, turning schedule, and add extra covers (e.g., hessian). Pet waste is never accepted.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q">Is it a public-health concern?</span></summary>
+        <div class="content">
+          <p>We use source separation (no high-risk materials), closed containers, tool-only handling, sanitiser at the bay, and immediate covering with browns to suppress vectors and odour. Still concerned? Visit on Saturdays when we open the bins—we’ll walk you through it.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q">Is the site secure? Can vagrants/animals access it?</span></summary>
+        <div class="content">
+          <p>The bins are lidded and locked, with clear rules and regular volunteer checks. We exclude edible attractants (meat/dairy) and respond quickly to any issues reported.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q">Can you collect from homes?</span></summary>
+        <div class="content">
+          <p>Right now we’re running park drop-off on Saturdays. If you need help getting your container to the park, let us know—we’ll try to match you with a nearby volunteer. If there’s enough interest, we’ll pilot a street-by-street collection day.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q">Where exactly do I put my scraps?</span></summary>
+        <div class="content">
+          <p>Collect during the week (or freeze them). On Saturday, bring your container to the compost bins in Prieska Park. We’ll share the pin and times on the neighbourhood WhatsApp groups.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q">Do I need a special container?</span></summary>
+        <div class="content">
+          <p>No. Low-cost options include a clean ice-cream tub or other lidded container, a paper bag, or a newspaper wrap. Please avoid plastic and “compostable” plastic bags (they don’t break down well in our system). If you want a countertop caddy, see <a href="/drop-off.html#accept">Drop Off</a>.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q">I don’t cook much / I bury scraps in my garden—should I still join?</span></summary>
+        <div class="content">
+          <p>Yes—small amounts help. This project offers a shared, tidy option and supports neighbours who can’t compost at home.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q">I already separate my food waste—how can I help others?</span></summary>
+        <div class="content">
+          <p>You’re a Compost Champion already! Do drop-off demos, help with light maintenance, and join the bin-opening rota (weekly rotation so no one carries it alone). Ready to jump in? See <a href="/volunteers.html">Volunteers</a>.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q">Can I take compost home?</span></summary>
+        <div class="content">
+          <p>Yes. Contributors can collect a share when batches finish. We’ll also reserve compost for verge beds and street trees.</p>
+        </div>
+      </details>
+    </section>
+
+    <div data-include="/partials/footer.html"></div>
+  </div>
+      <script src="/js/includes.js"></script>
+    <script>
+        // set the year after the footer has been injected
+        window.addEventListener('partials:loaded', () => {
+            const y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+        });
+    </script>
+    <script src="/js/events.js"></script>
+</body>
+</html>

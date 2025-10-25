@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What is Composting? — Compost Matters</title>
+  <meta name="description" content="What composting is, simple steps, and our maintenance routine." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div data-include="/partials/header.html"></div>
+
+    <section id="what-is-composting">
+      <h2>What is Composting?</h2>
+      <div class="card">
+        <p>Composting is a <strong>natural recycling process</strong> where microbes (and sometimes worms!) break down
+          organic materials—like fruit peels, coffee grounds, and dry leaves—into dark, crumbly soil-like material
+          called <strong>compost</strong>. It works best with a simple balance of “browns” (dry, carbon-rich) and
+          “greens” (fresh, nitrogen-rich), plus a little air and moisture.</p>
+        <div><img src="/images/what-is-compost.png" alt="What is compost"></div>
+      </div>
+    </section>
+
+    <section id="methods">
+      <h2>Composting Methods at a Glance</h2>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Hot (Thermophilic)</h3>
+          <p>Large, well-balanced piles heat to 55–65 °C with regular turning and moisture management.</p>
+          <ul class="list">
+            <li>✅ Fast (≈6–12 weeks)</li>
+            <li>✅ Can reduce many seeds/pathogens</li>
+            <li>⚠️ Needs frequent turning & close monitoring</li>
+          </ul>
+          <p class="small">Great results, but hands-on—less viable for our volunteer-run park setup.</p>
+        </div>
+
+        <div class="card">
+          <h3>Worm (Vermicomposting)</h3>
+          <p>Red wigglers (Eisenia fetida) digest food scraps in a bin to make rich worm castings.</p>
+          <ul class="list">
+            <li>✅ Ideal for flats/small spaces</li>
+            <li>✅ Produces premium “vermicompost”</li>
+            <li>⚠️ Go easy on citrus/onion; no meat/dairy</li>
+          </ul>
+          <p class="small">Best as an at-home method; not our on-site system.</p>
+        </div>
+
+        <div class="card">
+          <h3>Cold/Passive</h3>
+          <p>Add scraps over time with regular layers of browns; minimal turning.</p>
+          <ul class="list">
+            <li>✅ Low effort, reliable</li>
+            <li>⚠️ Slower (months), lower temperatures</li>
+            <li>⚠️ Higher chance of some seeds surviving</li>
+          </ul>
+          <p class="small"><strong>Our site:</strong> We use a managed passive approach—consistent browns on top,
+            occasional turn for airflow, and moisture checks.</p>
+        </div>
+
+        <div class="card">
+          <h3>Bokashi (Pre-Ferment)</h3>
+          <p>In a sealed bucket with EM (effective microbes), food—including meat/dairy—ferments. The pre-treated
+            material is then buried or finished in a compost system.</p>
+          <ul class="list">
+            <li>✅ Handles “tricky” foods in a sealed system</li>
+            <li>⚠️ Needs a burial/finishing step</li>
+          </ul>
+          <p class="small"><strong>At home:</strong> Bokashi is a good way to deal with meat/dairy safely.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Trench/Sheet</h3>
+          <p>Scraps are buried directly in soil or spread thinly and covered with mulch/soil.</p>
+          <ul class="list">
+            <li>✅ Very simple; no bin needed</li>
+            <li>⚠️ Needs garden space; avoid plant roots</li>
+          </ul>
+          <p class="small">Good for private gardens; not suitable for a shared park space.</p>
+        </div>
+
+        <div class="card">
+          <h3>Industrial/Facility</h3>
+          <p>Large, controlled systems (often aerated) that can process mixed organics, including compostable packaging.
+          </p>
+          <ul class="list">
+            <li>✅ Can take meat/dairy & certified compostables</li>
+            <li>⚠️ Requires specialised equipment & permits</li>
+          </ul>
+          <p class="small">Not available for household drop-offs locally; community composting fills the gap.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:12px;">
+        <p><strong>What we use:</strong> A <em>passive (cold) composting</em> setup with kitchen scraps layered with dry
+          browns, lids closed, and light turning to keep air moving. This keeps odours low and the workflow simple for
+          volunteers.</p>
+        <p><strong>About meat & dairy:</strong> Safe in industrial or tightly managed hot/sealed systems
+          (or via <em>Bokashi at home</em>), but <strong class="accent">not accepted at our community site</strong> to prevent odours
+          and pests.</p>
+      </div>
+    </section>
+
+    <div data-include="/partials/footer.html"></div>
+  </div>
+  <script src="/js/includes.js"></script>
+  <script>
+    // set the year after the footer has been injected
+    window.addEventListener('partials:loaded', () => {
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    });
+  </script>
+  <script src="/js/events.js"></script>
+</body>
+
+</html>
