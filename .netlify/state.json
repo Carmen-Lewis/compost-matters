@@ -1,0 +1,21 @@
+{
+	"siteId": "348832bd-bb30-4af6-ac50-aba23c240193",
+	"geolocation": {
+		"data": {
+			"city": "Cape Town",
+			"country": {
+				"code": "ZA",
+				"name": "South Africa"
+			},
+			"subdivision": {
+				"code": "WC",
+				"name": "Western Cape"
+			},
+			"timezone": "Africa/Johannesburg",
+			"latitude": -33.9258,
+			"longitude": 18.4259,
+			"postalCode": "8001"
+		},
+		"timestamp": 1761409195920
+	}
+}
